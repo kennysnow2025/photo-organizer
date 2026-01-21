@@ -20,23 +20,34 @@
 ### 1. 环境准备
 确保你的电脑安装了 Python 3.8+。
 
-```bash
+~~~bash
 # 安装依赖库
 pip install -r requirements.txt
+~~~
+
 ### 2. 配置 API Key
 本项目使用 OpenAI 格式的 API（支持 DeepSeek, 阿里通义, OpenAI 等）。
 
-将项目中的 .env.example 文件重命名为 .env。
-用记事本打开 .env，填入你的 API Key：
+1. 将项目中的 `.env.example` 文件重命名为 `.env`。
+2. 用记事本打开 `.env`，填入你的 API Key：
+
+~~~ini
 OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
 OPENAI_BASE_URL=https://api.deepseek.com  # 如果是用 DeepSeek 或其他模型
+~~~
 
 ### 3. 运行整理
-把需要整理的照片放入 input_photos 文件夹（如果没有请新建），然后在main.py所在的termial运行：
->python main.py
-整理好的照片将会出现在 output_organized 文件夹中。
+把需要整理的照片放入 `input_photos` 文件夹（如果没有请新建），然后在 `main.py` 所在的 terminal 运行：
 
-📂 项目结构
-main.py: 智能体主程序
-SKILL.md: 定义 AI 角色的核心 Prompt (Skills)
-requirements.txt: 项目依赖
+~~~bash
+python main.py
+~~~
+
+整理好的照片将会出现在 `output_organized` 文件夹中。
+
+---
+
+### 📂 项目结构
+*   `main.py`: 智能体主程序
+*   `SKILL.md`: 定义 AI 角色的核心 Prompt (Skills)
+*   `requirements.txt`: 项目依赖
